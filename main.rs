@@ -1,9 +1,31 @@
 const PI: f64 = 3.14159; // Constante para o valor de pi
-static mut VAR_GLOBAL: i32 = 100; // Variável global estática
+static VAR_GLOBAL: i32 = 100; // Variável global estática
 
 fn main() {
     escopo();
     sombra();
+    soma(10, 20);
+    condicionais();
+}
+
+fn condicionais() {
+    let numero = 6;
+
+    if numero > 0 {
+        println!("O número é positivo.");
+    } else if numero < 0 {
+        println!("O número é negativo.");
+    } else {
+        println!("O número é zero.");
+    }
+
+    let numero_condicional = if numero % 2 == 0 { "par" } else { "ímpar" };
+    println!("O número {} é {}.", numero, numero_condicional);
+}
+
+fn soma(a: i32, b: i32) -> i32 {
+    println!("Soma de {} e {} é {}", a, b, a + b);
+    a + b
 }
 
 fn sombra() {
@@ -48,7 +70,5 @@ fn escopo() {
     // Constantes são armazenadas na memória de forma eficiente, pois o compilador pode otimizar seu uso.
     // fazer uma constante global é uma boa prática para valores que são usados em várias partes do programa, evitando a repetição de código e facilitando a manutenção.
     println!("O valor da constante PI é: {} e seu tamanho em bytes é: {:?}", PI, std::mem::size_of_val(&PI));
-    unsafe {
-        println!("O valor da variável global VAR_GLOBAL é: {}", VAR_GLOBAL);
-    }
+    println!("O valor da variável global VAR_GLOBAL é: {}", VAR_GLOBAL);
 }
