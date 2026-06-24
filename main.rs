@@ -10,11 +10,14 @@ mod sombra;
 mod soma;
 #[path = "resources/condicionais.rs"]
 mod condicionais;
+#[path = "resources/ownership.rs"]
+mod ownership;
 
 fn main() {
     repeticoes::repeticoes();
     escopo::escopo();
     sombra::sombra();
+    ownership::ownership();
     soma::soma(10, 20);
     condicionais::condicionais();
 }
