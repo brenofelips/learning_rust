@@ -1,15 +1,15 @@
 // Cada função agora vive em seu próprio arquivo dentro da pasta `resources`.
 // O atributo `#[path = "..."]` indica ao compilador onde encontrar o módulo.
-#[path = "resources/repeticoes.rs"]
-mod repeticoes;
-#[path = "resources/escopo.rs"]
-mod escopo;
-#[path = "resources/sombra.rs"]
-mod sombra;
-#[path = "resources/soma.rs"]
-mod soma;
 #[path = "resources/condicionais.rs"]
 mod condicionais;
+#[path = "resources/escopo.rs"]
+mod escopo;
+#[path = "resources/repeticoes.rs"]
+mod repeticoes;
+#[path = "resources/soma.rs"]
+mod soma;
+#[path = "resources/sombra.rs"]
+mod sombra;
 // #[path = "resources/ownership.rs"]
 // mod ownership;
 #[path = "resources/pattern_matching.rs"]

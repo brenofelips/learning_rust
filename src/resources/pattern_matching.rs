@@ -6,16 +6,19 @@
 // O `match` é uma forma poderosa de controle de fluxo em Rust, permitindo que você lide com diferentes casos de maneira clara e concisa. No nosso exemplo, estamos usando o `match` para categorizar os números de 1 a 20 em diferentes faixas, retornando uma string que descreve a quantidade correspondente a cada número.
 pub fn pattern_matching() {
     for x in 1..=20 {
-      println!("{} é {}", x, match x {
-        1 => "Pouco",
-        2 | 3 => "Um pouco mais",
-        4..=10 => "Um bucado",
-        _ if x % 2 == 0 => "Uma boa quantidade",
-        _ => "Muito"
-      });
+        println!(
+            "{} é {}",
+            x,
+            match x {
+                1 => "Pouco",
+                2 | 3 => "Um pouco mais",
+                4..=10 => "Um bucado",
+                _ if x % 2 == 0 => "Uma boa quantidade",
+                _ => "Muito",
+            }
+        );
     }
 }
-
 
 // escreva mais 3 exemplos onde eu possa usar o pattern matching, e explique o que está acontecendo em cada um deles. Use exemplos simples, como comparar números ou strings, e explique como o pattern matching ajuda a tornar o código mais legível e fácil de entender.
 fn exemplo1() {

@@ -1,0 +1,5 @@
+[package]
+name = "alura_curso_rust"
+authors = ["Breno Felipe de Bairros <brendo.filipe2050s@gmail.com>"]
+version = "0.1.0"
+edition = "2021"

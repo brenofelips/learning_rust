@@ -5,7 +5,12 @@ pub fn repeticoes() {
     println!("Tabuada do {} usando while:", multiplicador);
     while contador < 10 {
         contador += 1;
-        println!("{} x {} = {}", multiplicador, contador, multiplicador * contador);
+        println!(
+            "{} x {} = {}",
+            multiplicador,
+            contador,
+            multiplicador * contador
+        );
     }
 
     // tabuada usando loop
@@ -13,7 +18,12 @@ pub fn repeticoes() {
     contador = 0; // Resetando o contador para a próxima repetição
     loop {
         contador += 1;
-        println!("{} x {} = {}", multiplicador, contador, multiplicador * contador);
+        println!(
+            "{} x {} = {}",
+            multiplicador,
+            contador,
+            multiplicador * contador
+        );
         if contador >= 10 {
             break; // Saindo do loop quando o contador atingir 10
         }
