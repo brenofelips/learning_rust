@@ -10,14 +10,17 @@ mod sombra;
 mod soma;
 #[path = "resources/condicionais.rs"]
 mod condicionais;
-#[path = "resources/ownership.rs"]
-mod ownership;
+// #[path = "resources/ownership.rs"]
+// mod ownership;
+#[path = "resources/pattern_matching.rs"]
+mod pattern_matching;
 
 fn main() {
-    repeticoes::repeticoes();
     escopo::escopo();
     sombra::sombra();
-    ownership::ownership();
     soma::soma(10, 20);
+    // ownership::ownership();
+    repeticoes::repeticoes();
     condicionais::condicionais();
+    pattern_matching::pattern_matching();
 }
